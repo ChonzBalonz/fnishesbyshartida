@@ -15,11 +15,18 @@
   max-width: 700px;
   margin: 120px auto 0 auto;
   padding: 2rem;
-  background: var(--wood-tan, #d2b48c);
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(76, 42, 30, 0.1);
+  background: linear-gradient(
+      135deg,
+      rgba(245, 222, 179, 0.7) 0%,
+      rgba(210, 180, 140, 0.7) 100%
+    ),
+    url("https://www.transparenttextures.com/patterns/wood-pattern.png") repeat,
+    var(--wood-tan, #d2b48c);
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   text-align: center;
   color: var(--wood-brown, #5c4033);
+  backdrop-filter: blur(10px);
 }
 
 .slideshow {
