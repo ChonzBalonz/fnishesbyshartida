@@ -2,13 +2,17 @@
   display: flex;
   justify-content: space-around;
   padding: 4rem 5%;
-  background-color: #ffffff;
+  background-color: var(--wood-tan, #d2b48c);
 }
 
 .feature-item {
   flex-basis: 30%;
   text-align: center;
   padding: 2rem;
+  background: var(--wood-brown, #5c4033);
+  color: var(--wood-beige, #f5f5dc);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(76, 42, 30, 0.1);
 }
 
 .feature-icon {
@@ -21,9 +25,10 @@
 .feature-item h3 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
-  color: #000;
+  color: var(--wood-mahogany, #4b2e2e);
+  text-shadow: 0 2px 8px rgba(44, 24, 8, 0.18);
 }
 
 .feature-item p {
-  color: #555;
+  color: var(--wood-beige, #f5f5dc);
 }

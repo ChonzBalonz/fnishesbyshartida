@@ -34,18 +34,35 @@
 
 /* The text content goes on top of everything */
 .hero-content {
-  position: relative;
-  z-index: 3; /* Highest z-index */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
   max-width: 600px;
-  padding: 2rem 5%;
-  background-color: rgba(17, 24, 39, 0.75);
-  color: #ffffff;
+  padding: 2.5rem 6%;
+  background: linear-gradient(
+    135deg,
+    rgba(92, 64, 51, 0.92) 60%,
+    rgba(75, 46, 46, 0.92) 100%
+  );
+  color: var(--wood-beige, #f5f5dc);
+  text-shadow: 0 2px 8px rgba(44, 24, 8, 0.7), 0 1px 0 #000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(44, 24, 8, 0.18);
+  border: 2px solid rgba(210, 180, 140, 0.25);
 }
 
-.hero-welcome {
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 0.5rem;
+.hero-welcome,
+.hero-title,
+.hero-services {
+  color: var(--wood-beige, #f5f5dc);
+  text-shadow: 0 2px 8px rgba(44, 24, 8, 0.7), 0 1px 0 #000;
 }
 
 .hero-title {
@@ -53,10 +70,19 @@
   font-weight: bold;
   margin-bottom: 1rem;
   line-height: 1.2;
+  color: var(--wood-beige, #f5f5dc);
+  text-shadow: 0 4px 16px rgba(44, 24, 8, 0.85), 0 2px 4px #000, 0 1px 0 #fff2;
+  letter-spacing: 1.5px;
+  background: linear-gradient(90deg, rgba(245,245,220,0.98) 0%, rgba(210,180,140,0.92) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero-title .highlight {
-  color: #f39c12; /* Orange highlight */
+  color: #f39c12;
+  text-shadow: 0 4px 16px rgba(44, 24, 8, 0.85), 0 2px 4px #000, 0 1px 0 #fff2;
+  -webkit-text-fill-color: #f39c12;
 }
 
 .hero-services {

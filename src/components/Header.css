@@ -1,7 +1,7 @@
 /* Main header container: pushes the logo and nav apart */
 .header {
   display: flex;
-  justify-content: space-between; /* This is the key change */
+  justify-content: center; /* This is the key change */
   align-items: center;
   padding: 1rem 5%;
   background-color: #ffffff;
@@ -38,12 +38,12 @@
   display: flex;
   margin: 0;
   padding: 0;
-  gap: 2rem; /* Creates space between each link */
+  gap: 4rem; /* Creates space between each link */
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #f5f5dc;
   font-weight: 500;
   padding-bottom: 5px;
   position: relative;

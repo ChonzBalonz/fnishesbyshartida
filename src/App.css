@@ -1,8 +1,33 @@
+:root {
+  --wood-brown: #5c4033;
+  --wood-tan: #d2b48c;
+  --wood-beige: #f5f5dc;
+  --wood-mahogany: #4b2e2e;
+  --wood-shadow: 0 4px 32px rgba(76, 42, 30, 0.18);
+  --wood-gradient: linear-gradient(135deg, #5c4033 0%, #4b2e2e 100%);
+  --accent: #f39c12;
+  --text-light: var(--wood-beige);
+  --text-muted: #cfc6be;
+}
+
+body {
+  background: var(--wood-brown);
+  color: var(--text-light);
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background-image: var(--wood-gradient);
+  background-attachment: fixed;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background: var(--wood-tan);
+  border-radius: 18px;
+  box-shadow: var(--wood-shadow);
 }
 
 .logo {
@@ -12,10 +37,7 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em var(--accent));
 }
 
 @keyframes logo-spin {
@@ -35,8 +57,41 @@
 
 .card {
   padding: 2em;
+  background: var(--wood-tan);
+  color: var(--wood-brown);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(76, 42, 30, 0.12);
 }
 
 .read-the-docs {
-  color: #888;
+  color: var(--text-muted);
+}
+
+header,
+.header {
+  background: var(--wood-mahogany);
+  color: var(--wood-beige);
+  box-shadow: 0 2px 8px rgba(76, 42, 30, 0.18);
+}
+
+footer,
+.footer {
+  background: var(--wood-mahogany);
+  color: var(--wood-beige);
+  box-shadow: 0 -2px 8px rgba(76, 42, 30, 0.18);
+}
+
+input,
+textarea {
+  background: var(--wood-beige);
+  color: var(--wood-brown);
+  border: 1px solid var(--wood-tan);
+  border-radius: 6px;
+  padding: 0.5em 1em;
+  box-shadow: 0 1px 4px rgba(76, 42, 30, 0.08);
+}
+
+/* Remove default background from html */
+html {
+  background: var(--wood-brown);
 }

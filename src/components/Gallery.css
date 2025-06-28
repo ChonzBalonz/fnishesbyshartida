@@ -11,15 +11,15 @@
 
 .gallery-page {
   position: relative;
-  z-index: 1000; /* above the overlay */
+  z-index: 1000;
   max-width: 700px;
   margin: 120px auto 0 auto;
   padding: 2rem;
-  background: #fff;
+  background: var(--wood-tan, #d2b48c);
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(76, 42, 30, 0.1);
   text-align: center;
-  color: black;
+  color: var(--wood-brown, #5c4033);
 }
 
 .slideshow {
@@ -93,9 +93,9 @@
 }
 
 .gallery-item {
-  background: #fff;
+  background: var(--wood-tan, #d2b48c);
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(76, 42, 30, 0.08);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -149,9 +149,9 @@
 }
 
 .carousel-card {
-  background: #fff;
+  background: var(--wood-tan, #d2b48c);
   border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 8px 32px rgba(76, 42, 30, 0.13);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -169,6 +169,68 @@
   object-fit: contain;
   border-radius: 12px;
   background: #f8f8f8;
+}
+
+.services-page {
+  max-width: 1200px;
+  margin: 60px auto 0 auto;
+  padding: 2rem 1rem 3rem 1rem;
+  background: var(--wood-tan, #d2b48c);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(76, 42, 30, 0.08);
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.services-header h1 {
+  color: #222;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.services-header p {
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: var(--wood-brown, #5c4033);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(76, 42, 30, 0.1);
+  padding: 2.2rem 1.2rem 1.5rem 1.2rem;
+  text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  border: 1px solid #bfa77a;
+  color: var(--wood-beige, #f5f5dc);
+}
+
+.service-card:hover {
+  box-shadow: 0 8px 32px rgba(243, 156, 18, 0.13);
+  transform: translateY(-6px) scale(1.03);
+  border-color: #f9d9a0;
+}
+
+.service-card h3 {
+  color: var(--wood-tan, #d2b48c);
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(44, 24, 8, 0.18);
+}
+
+.service-card p {
+  color: var(--wood-beige, #f5f5dc);
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 @media (max-width: 1200px) {
