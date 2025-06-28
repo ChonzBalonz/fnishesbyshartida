@@ -41,3 +41,12 @@
 .feature-item p {
   color: var(--wood-beige, #f5f5dc);
 }
+
+.feature-animated-number {
+  color: #f39c12;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-right: 0.2em;
+  vertical-align: middle;
+  transition: color 0.3s;
+}

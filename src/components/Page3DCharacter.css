@@ -1,0 +1,28 @@
+.ai-3d-character-container {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 160px;
+  height: 160px;
+  z-index: 1200;
+  pointer-events: none;
+  opacity: 0.96;
+  background: none;
+}
+
+.ai-3d-character-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0 4px 24px rgba(44, 24, 8, 0.13);
+}
+
+@media (max-width: 600px) {
+  .ai-3d-character-container {
+    bottom: 12px;
+    right: 12px;
+    width: 90px;
+    height: 90px;
+  }
+}

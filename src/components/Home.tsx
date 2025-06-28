@@ -1,5 +1,6 @@
 import Hero from "./Hero";
 import Features from "./Features";
+import FAQTable from "./FAQTable";
 import { useEffect, useRef } from "react";
 
 function Home() {
@@ -26,6 +27,7 @@ function Home() {
     <>
       <Hero />
       <Features />
+      <FAQTable />
       <div className="services-page">
         <div className="services-header">
           <h1>Our Services</h1>

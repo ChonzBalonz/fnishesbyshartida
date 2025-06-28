@@ -1,10 +1,7 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Header from "./components/Header";
-import Home from "./components/Home";
-import Contact from "./components/Contact";
-import Gallery from "./components/Gallery";
-import About from "./components/About";
 import SwipeNavigator from "./components/SwipeNavigator";
+import AnimatedRoutes from "./components/AnimatedRoutes";
 import "./App.css";
 
 function App() {
@@ -12,12 +9,7 @@ function App() {
     <BrowserRouter>
       <SwipeNavigator />
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
+      <AnimatedRoutes />
     </BrowserRouter>
   );
 }

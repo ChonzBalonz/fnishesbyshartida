@@ -1,5 +1,6 @@
 import "./Features.css";
 import { useEffect, useRef } from "react";
+import AnimatedNumber from "./AnimatedNumber";
 
 // A simple placeholder icon component
 const FeatureIcon = () => (
@@ -48,12 +49,26 @@ function Features() {
       </div>
       <div className="feature-item" ref={(el) => (itemsRef.current[1] = el)}>
         <FeatureIcon />
-        <h3>15+ Years of Professional Experience</h3>
+        <h3>
+          <AnimatedNumber
+            value={15}
+            duration={1200}
+            className="feature-animated-number"
+          />
+          + Years of Professional Experience
+        </h3>
         <p>Our expertise ensures a perfect finish every time.</p>
       </div>
       <div className="feature-item" ref={(el) => (itemsRef.current[2] = el)}>
         <FeatureIcon />
-        <h3>A Large Number of Grateful Customers</h3>
+        <h3>
+          <AnimatedNumber
+            value={500}
+            duration={1200}
+            className="feature-animated-number"
+          />
+          + Grateful Customers
+        </h3>
         <p>
           We pride ourselves on customer satisfaction and beautiful results.
         </p>
