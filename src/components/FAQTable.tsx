@@ -55,7 +55,10 @@ const FAQTable: React.FC = () => {
                 </td>
               </tr>
               <tr>
-                <td className={`faq-answer${openIndex === idx ? " open" : ""}`}>
+                <td
+                  className={`faq-answer${openIndex === idx ? " open" : ""}`}
+                  style={{ display: openIndex === idx ? "table-cell" : "none" }}
+                >
                   <div>{faq.answer}</div>
                 </td>
               </tr>
