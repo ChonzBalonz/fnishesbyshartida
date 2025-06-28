@@ -42,6 +42,8 @@ function Contact() {
           loop
           muted
           playsInline
+          preload="auto"
+          poster="/img1.jpg"
           style={{
             position: "absolute",
             top: 0,

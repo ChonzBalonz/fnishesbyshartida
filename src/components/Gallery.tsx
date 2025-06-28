@@ -33,7 +33,7 @@ function Gallery() {
                 transform: `rotate(${rotations[idx % rotations.length]}deg)`,
               }}
             >
-              <img src={src} alt={`Work ${idx + 1}`} />
+              <img src={src} alt={`Work ${idx + 1}`} loading="lazy" />
             </div>
           </SwiperSlide>
         ))}
