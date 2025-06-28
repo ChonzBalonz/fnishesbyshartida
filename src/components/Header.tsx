@@ -1,39 +1,43 @@
+import { Link } from "react-router-dom"; // <-- 1. Import Link
 import "./Header.css";
 
 function Header() {
   return (
     <header className="header">
+      {/* ... (the header-top div remains the same) ... */}
       <div className="header-top">
         <div className="contact-info">
           <span>Client Services: (123) 456-7890</span>
           <span>Email: info@finishesbyshartida.com</span>
         </div>
         <div className="social-links">
-          {/* Add your social media links here */}
           <a href="#">f</a>
           <a href="#">t</a>
           <a href="#">in</a>
         </div>
       </div>
+
       <nav className="main-nav">
-        <div className="logo">Finishes by Shartida</div>
+        <div className="logo">
+          {/* Logo links back to home */}
+          <Link to="/">Finishes by Shartida</Link>
+        </div>
         <ul className="nav-links">
+          {/* 2. Change a to Link */}
           <li>
-            <a href="#" className="active">
-              Home
-            </a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="#">Services</a>
+            <Link to="/services">Services</Link>
           </li>
           <li>
-            <a href="#">Gallery</a>
+            <Link to="/gallery">Gallery</Link>
           </li>
           <li>
-            <a href="#">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
         <button className="quote-button">Request Quote</button>
