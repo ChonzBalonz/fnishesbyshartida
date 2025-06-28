@@ -43,7 +43,9 @@ const AnimatedNumber: React.FC<AnimatedNumberProps> = ({
       }
     }
     raf.current = requestAnimationFrame(animate);
-    return () => raf.current && cancelAnimationFrame(raf.current);
+    return () => {
+      if (raf.current) cancelAnimationFrame(raf.current);
+    };
   }, [value, duration, hasAnimated]);
 
   return (
