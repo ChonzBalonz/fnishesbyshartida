@@ -1,37 +1,36 @@
+/* Main header container: pushes the logo and nav apart */
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
   display: flex;
-  justify-content: center; /* Center the nav */
+  justify-content: space-between; /* This is the key change */
   align-items: center;
   padding: 1rem 5%;
   background-color: #ffffff;
-  color: #333;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box; /* Ensures padding doesn't add to the width */
-  height: 80px; /* Fixed height for the header */
+  box-sizing: border-box;
+  position: fixed; /* Keeps the header at the top */
+  top: 0; /* Positions the header at the top of the viewport */
+  z-index: 1100; /* Make sure this is higher than .gallery-page and .gallery-overlay */
+  height: 80px;
+  width: 100vw;
+  left: 0;
 }
 
+/* Logo styling */
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
 }
 
 .logo a {
-  color: #f39c12; /* Use theme orange for visibility */
+  color: #2d3436; /* Dark color for visibility */
   text-decoration: none;
 }
 
+/* Navigation container: arranges the links and the button */
 .main-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Spread out logo, links, button */
-  width: 100%;
-  max-width: 1100px; /* Optional: keeps nav from stretching too wide */
-  gap: 2rem; /* Adds space between nav links and button */
+  gap: 2rem; /* Creates space between the links list and the button */
 }
 
 .nav-links {
@@ -39,7 +38,7 @@
   display: flex;
   margin: 0;
   padding: 0;
-  gap: 2rem; /* Adds space between each nav link */
+  gap: 2rem; /* Creates space between each link */
 }
 
 .nav-links a {
@@ -50,7 +49,7 @@
   position: relative;
 }
 
-/* Underline effect on hover/active */
+/* Underline effect on hover */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -62,20 +61,19 @@
   transition: width 0.3s ease;
 }
 
-.nav-links a:hover::after,
-.nav-links a.active::after {
+.nav-links a:hover::after {
   width: 100%;
 }
 
+/* Button styling */
 .quote-button {
-  background-color: transparent;
+  background-color: #333;
+  color: #fff;
   border: 2px solid #333;
   padding: 0.6rem 1.2rem;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
-  background-color: #333;
-  color: #fff;
 }
 
 .quote-button:hover {
