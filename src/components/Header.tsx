@@ -4,11 +4,10 @@ import "./Header.css";
 function Header() {
   return (
     <header className="header">
-      <div className="logo">
-        <Link to="/">Finishes by Shartida</Link>
-      </div>
-
       <nav className="main-nav">
+        <div className="logo">
+          <Link to="/">Finishes by Shartida</Link>
+        </div>
         <ul className="nav-links">
           <li>
             <Link to="/">Home</Link>

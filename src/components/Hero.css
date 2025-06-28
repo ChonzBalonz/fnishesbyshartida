@@ -5,6 +5,7 @@
   height: 100vh; /* Adjust height as needed */
   color: white;
   overflow: hidden; /* This prevents any video overflow */
+  padding-top: 80px; /* Adjust this value to match your header height */
 }
 
 /* New style for the video background */

@@ -1,8 +1,6 @@
 import "./Hero.css";
 // Consider using an optimized and compressed video for better performance.
-// Optionally, provide multiple formats for broader browser support.
 import sandingHeroVideoMp4 from "./Sanding Hero video.mp4";
-import sandingHeroVideoWebm from "./Sanding Hero video.webm"; // Add a .webm version if available
 
 function Hero() {
   return (
@@ -16,8 +14,7 @@ function Hero() {
         playsInline
         preload="auto"
       >
-        {/* Provide multiple sources for better compatibility */}
-        <source src={sandingHeroVideoWebm} type="video/webm" />
+        {/* Only use the mp4 source */}
         <source src={sandingHeroVideoMp4} type="video/mp4" />
         Your browser does not support the video tag.
       </video>

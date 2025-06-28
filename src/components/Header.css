@@ -1,13 +1,18 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Center the nav */
   align-items: center;
   padding: 1rem 5%;
   background-color: #ffffff;
   color: #333;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 100%;
   box-sizing: border-box; /* Ensures padding doesn't add to the width */
+  height: 80px; /* Fixed height for the header */
 }
 
 .logo {
@@ -16,13 +21,16 @@
 }
 
 .logo a {
-  color: #000;
+  color: #f39c12; /* Use theme orange for visibility */
   text-decoration: none;
 }
 
 .main-nav {
   display: flex;
   align-items: center;
+  justify-content: space-between; /* Spread out logo, links, button */
+  width: 100%;
+  max-width: 1100px; /* Optional: keeps nav from stretching too wide */
   gap: 2rem; /* Adds space between nav links and button */
 }
 
@@ -66,9 +74,11 @@
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
+  background-color: #333;
+  color: #fff;
 }
 
 .quote-button:hover {
-  background-color: #333;
-  color: #fff;
+  background-color: #fff;
+  color: #333;
 }
