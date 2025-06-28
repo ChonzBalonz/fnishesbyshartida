@@ -1,3 +1,10 @@
+body,
+.gallery-page {
+  background: url("https://www.transparenttextures.com/patterns/wood-pattern.png")
+    repeat;
+  background-color: #d2b48c;
+}
+
 .gallery-overlay {
   position: fixed;
   top: 80px; /* height of your header */
@@ -12,21 +19,15 @@
 .gallery-page {
   position: relative;
   z-index: 1000;
-  max-width: 700px;
-  margin: 120px auto 0 auto;
-  padding: 2rem;
-  background: linear-gradient(
-      135deg,
-      rgba(245, 222, 179, 0.7) 0%,
-      rgba(210, 180, 140, 0.7) 100%
-    ),
-    url("https://www.transparenttextures.com/patterns/wood-pattern.png") repeat,
-    var(--wood-tan, #d2b48c);
-  border-radius: 1rem;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
   text-align: center;
   color: var(--wood-brown, #5c4033);
-  backdrop-filter: blur(10px);
+  backdrop-filter: none;
 }
 
 .slideshow {
@@ -100,9 +101,9 @@
 }
 
 .gallery-item {
-  background: var(--wood-tan, #d2b48c);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(76, 42, 30, 0.08);
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(44, 24, 8, 0.13);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -156,9 +157,9 @@
 }
 
 .carousel-card {
-  background: var(--wood-tan, #d2b48c);
+  background: #fff;
   border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(76, 42, 30, 0.13);
+  box-shadow: 0 8px 32px rgba(44, 24, 8, 0.13);
   display: flex;
   align-items: center;
   justify-content: center;

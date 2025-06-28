@@ -4,11 +4,13 @@ import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Gallery from "./components/Gallery";
 import About from "./components/About";
+import SwipeNavigator from "./components/SwipeNavigator";
 import "./App.css";
 
 function App() {
   return (
     <BrowserRouter>
+      <SwipeNavigator />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
