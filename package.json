@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
@@ -17,6 +18,15 @@
     "@eslint/js": "^9.9.0",
     "@types/react": "^18.3.23",
     "@types/react-dom": "^18.3.7",
+=======
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+>>>>>>> a73eeb4365b06f323f39bdd37e49f40ce49b5143
     "@vitejs/plugin-react": "^4.3.1",
     "eslint": "^9.9.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
