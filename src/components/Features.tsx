@@ -1,4 +1,5 @@
 import "./Features.css";
+import { useEffect, useRef } from "react";
 
 // A simple placeholder icon component
 const FeatureIcon = () => (
@@ -19,19 +20,38 @@ const FeatureIcon = () => (
 );
 
 function Features() {
+  const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const items = itemsRef.current;
+    const observer = new window.IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("feature-slide-in-view");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+    items.forEach((item) => item && observer.observe(item));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="features">
-      <div className="feature-item">
+      <div className="feature-item" ref={(el) => (itemsRef.current[0] = el)}>
         <FeatureIcon />
         <h3>Wide Range of Services</h3>
         <p>From staining to complete restoration, we have you covered.</p>
       </div>
-      <div className="feature-item">
+      <div className="feature-item" ref={(el) => (itemsRef.current[1] = el)}>
         <FeatureIcon />
         <h3>15+ Years of Professional Experience</h3>
         <p>Our expertise ensures a perfect finish every time.</p>
       </div>
-      <div className="feature-item">
+      <div className="feature-item" ref={(el) => (itemsRef.current[2] = el)}>
         <FeatureIcon />
         <h3>A Large Number of Grateful Customers</h3>
         <p>

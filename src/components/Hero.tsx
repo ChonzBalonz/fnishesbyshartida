@@ -28,7 +28,7 @@ function Hero() {
           <span>Staining</span> • <span>Painting</span> •{" "}
           <span>Restoration</span>
         </p>
-        <button className="hero-button">VIEW MORE DETAILS</button>
+        <button className="hero-button">Request Quote</button>
       </div>
     </section>
   );
