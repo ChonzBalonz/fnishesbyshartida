@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  height: 70vh; /* Adjust height as needed */
+  height: 100vh; /* Adjust height as needed */
   color: white;
   overflow: hidden; /* This prevents any video overflow */
 }
